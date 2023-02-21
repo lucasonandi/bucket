@@ -8,10 +8,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/', name: 'main_home')]
+    #[Route('/home', name: 'main_home')]
     public function home(): Response
     {
         return $this->render('main/home.html.twig', [
+
+        ]);
+    }
+    #[Route('/DBZ', name: 'main_DBZ')]
+    public function DBZ(): Response
+    {
+        return $this->render('main/DBZ.html.twig', [
 
         ]);
     }
