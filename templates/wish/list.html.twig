@@ -5,12 +5,24 @@
     <section class="wish-list">
         {% for wish in wishes %}
             <article>
-                <a href="{{ path('wish_detail', {'id': wish.id}) }}">{{ wish.title }} - {{ wish.dateCreated | date('d-m-Y') }}</a>
+                <a href="{{ path('wish_detail', {'id': wish.id}) }}"><h3>{{ wish.title }} - {{ wish.dateCreated | date('d-m-Y') }}</h3></a>
             </article>
         {% endfor %}
+        <a href="{{ path('main_DBZ') }}"><p class="clic">Clic ici</p></a>
 
     </section>
 {% endblock %}
 {% block title %}
     {{ parent()}} | List!
+{% endblock %}
+
+{% block styleCss %}
+    <style>
+        .clic{
+            text-align: center;
+            margin-top: 100px;
+            margin-right: 89px;
+        }
+
+    </style>
 {% endblock %}
